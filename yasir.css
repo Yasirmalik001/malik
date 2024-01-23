@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: blue; */
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    /* background-color: red; */
+}
+.header{
+    width: 100%;
+    height: 8vh;
+    background-color: green;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding-top: 20px; */
+    
+}
+.header a{
+    color: white;
+    font-size: 2vw;
+
+}
+.header p{
+    font-size: 2vw;
+}
+.header2{
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+.feature{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    list-style: none;
+    gap: 25px;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    list-style: none;
+    gap: 25px;
+}
+button{
+    padding: 10px 20px;
+    background-color: cadetblue;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+.section{
+    width: 100%;
+    height: 83vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 0 30px;
+    /* background-color: orangered; */
+}
+.left{
+    width: 40%;
+    height: 83vh;
+    display: flex;
+    align-items: start;
+    justify-content:space-evenly;
+    /* gap: 70px; */
+    flex-direction: column;
+    
+}
+.left h1{
+    font-size: 50px;
+    
+}
+span{
+    border: 2px solid black;
+    width: 200px;
+}
+.left p{
+    font-size: 25px;
+}
+.right{
+    width: 60%;
+    height: 83vh;
+    /* background-color: rgb(0, 255, 76); */
+}
+.btn .input{
+   background-color: black;
+   margin: 10px;
+}
+.sales{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+.sales h4{
+    border:  .5px solid black;
+    font-size: 30px;
+    padding: 10px 20px;
+    border-radius: 30px;
+
+}

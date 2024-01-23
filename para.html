@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+        .main{
+            width: 40dvh;
+            
+        }
+        #display{
+            width: 35dvh;
+            height: 8dvh;
+            font-size: 30px;
+             margin-bottom: 10px;
+            border-radius: 30px;
+            background-color: black;
+            color: white;
+            border: none;
+            outline: none;
+            text-align: right;
+        }
+        .button-contain{
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 29px;
+            border-radius: 15px;
+            
+            
+        }
+        .button{
+            font-size: 50px;
+            padding: 6px 11px;
+            border: none;
+            outline: none;
+            color: white;
+            text-align: center;
+            background-color: black;
+            
+        }
+        #c{
+            background-color: rgb(225, 255, 0);
+            border-radius: 10px;
+            color: black;
+           
+        }
+        #a{
+            background-color: rgb(218, 0, 44);
+            border-radius: 10px;
+            
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input type="text" id="display" readonly>
+        <div class="button-contain">
+            <button class="button" id="c" onclick=" content = ''; document.getElementById('display').value = content; ">c</button>
+            <button class="button" onclick=" content = content + 0;  document.getElementById('display').value = content; ">0</button>
+            <button class="button" onclick=" content = content + 1; document.getElementById('display').value = content; ">1</button>
+            <button class="button" onclick=" content = content + 2; document.getElementById('display').value = content; " >2</button>
+            <button class="button" onclick=" content = content + 3; document.getElementById('display').value = content; ">3</button>
+            <button class="button" onclick=" content = content + 4; document.getElementById('display').value = content; ">4</button>
+            <button class="button" onclick=" content = content + 5;  document.getElementById('display').value = content; ">5</button>
+            <button class="button" onclick=" content = content + 6; document.getElementById('display').value = content; ">6</button>
+            <button class="button" onclick=" content = content + 7;  document.getElementById('display').value = content; ">7</button>
+            <button class="button" onclick=" content = content + 8; document.getElementById('display').value = content; ">8</button>
+            <button class="button" onclick=" content = content + 9; document.getElementById('display').value = content; ">9</button>
+            <button class="button" id="a" onclick=" content = content + '-'; document.getElementById('display').value = content; ">-</button>
+            
+            <button class="button" id="a" onclick=" content = (eval(content)); document.getElementById('display').value = content; ">=</button>
+          
+            <button class="button" id="a" onclick=" content = content + '+'; document.getElementById('display').value = content; ">+</button>
+            <button class="button" id="a" onclick=" content = content + '*'
+            ; document.getElementById('display').value = content; ">*</button>
+            <button class="button" id="a" onclick=" content = content + '/'; document.getElementById('display').value = content; ">/</button>
+        </div>
+    </div>
+    <script>
+        let content = "";
+        document.getElementById("display").value = content;
+    </script>
+</body>
+</html>

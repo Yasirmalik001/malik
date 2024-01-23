@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tez.html">
+    <style>
+        body{
+            height: 500vh;
+           
+        }
+        .page{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EFEAE3;
+    position: relative;
+   
+}
+#elem1{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.576);
+    /* border-top: 1px solid black; */
+    display: flex;
+    align-items: center;
+    padding: 0  2vw;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+#elem1 h2{
+    font-size: 4vw;
+    z-index: 9;
+}
+#elem1 .overlay{
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+  position: absolute;
+  left: 0;
+  top: -100%;
+  transition: all 0.3s ease;
+}
+#elem1:hover .overlay{
+    top: 0;
+}
+#fixed{
+    width: 15vw;
+    height: 25vw;
+    background-color: olive;
+    position: absolute;
+    border-radius: 10px;
+    z-index: 99;
+    left: 50%;
+    position: fixed;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+#page-container{
+    background-color: red;
+}
+    </style>
+</head>
+<body>
+    <div id="fixed"></div>
+   <div class="page">
+    <div id="page-container">
+        <div id="elem1" data-type ="https://plus.unsplash.com/premium_photo-1675667381451-be2fc08a122e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG9yYW5nZXxlbnwwfHwwfHx8MA%3D%3D" >
+            <div class="overlay"></div>
+                <h2>Lorem, ipsum.</h2>
+        </div>
+        <div id="elem1" data-type="https://plus.unsplash.com/premium_photo-1671013032586-3e9a5c49ce3c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG9yYW5nZXxlbnwwfHwwfHx8MA%3D%3D">
+            <div class="overlay"></div>
+                <h2>Lorem, ipsum.</h2>
+        </div>
+        <div id="elem1" data-type="https://images.unsplash.com/photo-1543076659-9380cdf10613?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fG9yYW5nZXxlbnwwfHwwfHx8MA%3D%3D">
+            <div class="overlay"></div>
+                <h2>Lorem, ipsum.</h2>
+        </div>
+        <div id="elem1" data-type="https://images.unsplash.com/photo-1567475443875-1c698c245786?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzR8fG9yYW5nZXxlbnwwfHwwfHx8MA%3D%3D">
+            <div class="overlay"></div>
+                <h2>Lorem, ipsum.</h2>
+        </div>
+    </div>
+   </div>
+   <script>
+    var pageC = document.querySelector("#page-container");
+    var fix = document.querySelector("#fixed");
+    
+    pageC.addEventListener("mouseenter", function(){
+       fix.style.display = "block"
+    })
+    pageC.addEventListener("mouseleave", function(){
+        fix.style.display = "none"
+})
+// var a = document.querySelector("#elem1")
+// a.addEventListener("mouseenter", function(){
+//     var b = a.getAttribute("data-type")
+//     fix.style.backgroundImage = `url(${b})`
+    
+// })
+var a = document.querySelectorAll("#elem1")
+a.forEach(function(e){
+  e.addEventListener("mouseenter", function(){
+    var b = e.getAttribute("data-type")
+    fix.style.backgroundImage = `url(${b})`
+  })
+})
+        
+
+   </script>
+</body>
+</html>

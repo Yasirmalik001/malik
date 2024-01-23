@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="practice.html">
+  <style>
+    .page2{
+      width: 100%;
+      min-height: 100vh;
+      /* background-color: lightblue; */
+      position: relative;
+    }
+    .txt::-webkit-scrollbar{
+      display: none;
+    }
+    .txt{
+     white-space: nowrap;
+     overflow-x: auto;
+    }
+    .con{
+      display: inline-block;
+     
+      animation: yasir 10s linear infinite;
+    }
+    .gola{
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      display: inline-block;
+      border-radius: 50%;
+      margin: 1vw 1vw;
+    }
+    .txt h1{
+      display: inline-block;
+      font-size: 8vw;
+    }
+    @keyframes yasir {
+      to{
+        transform: translateX(0);
+      }
+      from{
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page2">
+    <div class="txt">
+      <div class="con">
+        <div class="gola"></div>
+        <h1>EXPERIENCES</h1>
+        <div class="gola"></div>
+        <h1>CONTENT</h1>
+        <div class="gola"></div>   
+        <h1>ENVIRONMENTS</h1> 
+     </div>
+     <div class="con">
+      <div class="gola"></div>
+      <h1>EXPERIENCES</h1>
+      <div class="gola"></div>
+      <h1>CONTENT</h1>
+      <div class="gola"></div>   
+      <h1>ENVIRONMENTS</h1> 
+   </div>
+   <div class="con">
+    <div class="gola"></div>
+    <h1>EXPERIENCES</h1>
+    <div class="gola"></div>
+    <h1>CONTENT</h1>
+    <div class="gola"></div>   
+    <h1>ENVIRONMENTS</h1> 
+ </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,392 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+.main{
+    position: relative;
+    z-index: 10;
+    padding-bottom: 100vh;
+    
+  }
+
+html,body{
+    max-width: 100%;
+    height: 100%;
+}
+.page1{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 2vw 3vw;
+}
+.nav1{
+    padding: 2vw 3vw;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav2 {
+    display: flex;
+    align-items: center;
+    padding: 2vw 3vw;
+    gap: .5vw;
+}
+.nav2 h4{
+    border: 1px solid rgba(0, 0, 0, 0.358);
+   border-radius: 50px;
+   padding: .7vw 1.5vw;
+   font-size: 1.3vw;
+   color: black;
+   position: relative;
+   overflow: hidden;
+   transition: all ease 0.3s;
+  
+}
+.nav2 h4::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    left: 0%;
+    border-radius: 10%;
+    transition: all ease 0.4s;
+    bottom: -100%;
+    
+}
+.nav2 h4:hover::after{
+    bottom: 0;
+   border-radius: 0;
+   
+}
+.nav2 h4 a{
+    text-decoration: none;
+    color: #000000bb;
+    position: relative;
+    z-index: 9;
+}
+.nav2 h4:hover a{
+    color: white;
+}
+.center{
+    width: 100%;
+    height: 75vh;
+    /* background-color: orange; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 2vw;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.419);
+
+}
+
+.left h2{
+    width: 22vw;
+    line-height: 2vw;
+}
+.right h1{
+    font-size: 10vw;
+    text-align: right;
+    line-height: .8;
+}
+video{
+    width: 100%;
+    border-radius: 30px;
+    position: relative;
+    margin-top: 50px;
+    
+}
+.right-hero{
+    width: 40vw;
+    height: 36vw;
+    background-color: red;
+    /* border-radius: 50%; */
+    position: absolute;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    right: 0;
+    top: 85vh;
+    /* transform: translate(20%, -20%); */
+    filter: blur(20px);
+}
+.hero1{
+    width: 40vw;
+    height: 36vw;
+    background-color: red;
+    position: absolute;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+    animation-name: yasir;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+   
+}
+@keyframes yasir {
+    to{
+        transform: translate(-15%, 10%);
+
+    }
+    from{
+        transform: translate(-15%, 10%);
+    }
+}
+.page2{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EFEAE3;
+    position: relative;
+}
+.movingtxt h1{
+    font-size: 9vw;
+    /* background-color: lightblue; */
+    display: inline-block;
+    
+
+}
+.movingtxt::-webkit-scrollbar{
+    display: none;
+}
+.movingtxt{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.gola{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: red;
+    margin: 20px;
+    
+}
+@keyframes move {
+    to{
+        transform: translateX(0);
+    }
+    from{
+        transform: translateX(-100%);
+    }
+}
+.page2-bottom{
+    width: 100%;
+    height: 80vh;
+    /* background-color: rgb(189, 189, 7); */
+    display: flex;
+    justify-content: space-between;
+    padding: 5vw 5vw;
+    position: relative;
+    z-index: 9;
+    
+
+}
+.bottom-right h1{
+    font-size: 3.5vw;
+    width: 70%;
+    line-height: 1;
+    display: inline-block;
+    position: relative;
+    
+}
+.bottom-left{
+    width: 30%;
+}
+.bottom-left img{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 4vw;
+}
+.bottom-left p{
+    padding-top: 4vw;
+}
+.page2 .gooey{
+    width: 35vw;
+    height: 30vw;
+   background: linear-gradient(orange,orangered);
+    position: absolute;
+    top: 50vh;
+    left: 25%;
+    filter: blur(20px);
+    border-radius: 50%;
+    animation-name: gooey;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+    
+}
+@keyframes gooey {
+    from{
+        transform: translate(10%,-10%)skew(0);
+    }
+    to{
+        transform: translate(10%,-10%)skew(10deg);
+    }
+}
+
+.page3{
+width: 100%;
+height: 100vh;
+background-color: #EFEAE3;
+position: relative;
+
+}
+#elem1{
+width: 100%;
+height: 15vh;
+position: relative;
+border-bottom: 1px solid rgba(0, 0, 0, 0.576);
+/* border-top: 1px solid black; */
+display: flex;
+align-items: center;
+padding: 0  2vw;
+transition: all 0.5s ease;
+overflow: hidden;
+}
+#elem1 h2{
+font-size: 2vw;
+z-index: 9;
+text-transform: uppercase;
+font-weight: 100;
+}
+#elem1 .overlay{
+width: 100%;
+height: 100%;
+background-color: orange;
+position: absolute;
+left: 0;
+top: -100%;
+/* position: relative; */
+transition: all 0.5s ease;
+}
+#elem1:hover .overlay{
+top: 0;
+}
+#fixed{
+position: fixed;
+width: 25vw;
+height: 30vw;
+background-color: olive;
+/* position: absolute; */
+border-radius: 10px;
+z-index: 99;
+left: 50%;
+top: 20%;
+display: none;
+background-size: cover;
+background-position: center;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    border-left: 1px solid black;
+  }
+
+ 
+  .swiper-slide {
+    width: 20%;
+    text-align: center;
+    
+}
+
+#footer{
+    position: fixed;
+    z-index: 9;
+    
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    bottom: 0;
+
+
+}
+
+#footer h1{
+        font-size: 24vw;
+        color: white;
+        
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  h1 {
+    font-size: 50px;
+    text-align: left;
+ 
+
+  }
+  p {
+    text-align: left;
+    padding: 30px 0px;
+  }
+  .swiper {
+    width: 100%;
+   
+  }
+  #cursor {
+    height: 6vw;
+    width: 6vw;
+    background-color: #ff5f38;
+    border-radius: 50%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #cursor h5 {
+    font-size: 1.5vw;
+  }
+  #cursor h5 i {
+    font-size: 30px;
+    font-weight: 900;
+    /* color: white; */
+  }
+  #page5 {
+    padding: 30px 0;
+    height: 50vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative
+  }
+.icon1{
+    color: white ;
+}
+.icon2{
+    color: white;
+}
+  
